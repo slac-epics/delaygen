@@ -1,0 +1,37 @@
+file drvDG645_instr_lcls.db
+{
+  pattern{ P    , R    }
+         { $(P) , $(R) }
+}
+
+file drvDG645_output_lcls.db
+{
+  pattern{ CHAN }
+         { T0   }
+         { AB   }
+         { CD   }
+         { EF   }
+         { GH   }
+}
+file drvDG645_trig_lcls.db
+{
+  pattern{ CHAN }
+         { AB   }
+         { CD   }
+         { EF   }
+         { GH   }
+}
+file drvDG645_delay_lcls.db
+{
+  pattern{ CHAN }
+         {  A   }
+         {  B   }
+         {  C   }
+         {  D   }
+         {  E   }
+         {  F   }
+         {  G   }
+         {  H   }
+}
+
+# End of file

@@ -1,0 +1,133 @@
+## Output channel $(CHAN) related PVs
+
+record(ai,"$(P)$(R)$(CHAN)Amp")
+{
+    field(PINI, "YES")
+    field(DESC, "Output Amplitude")
+    field(SCAN, "Passive")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) $(CHAN)_AMP")
+}
+record(ao,"$(P)$(R)$(CHAN)AmpSet")
+{
+    field(DESC, "Output Amplitude")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) $(CHAN)_AMP")
+    field(FLNK, "$(P)$(R)$(CHAN)Amp")
+}
+record(calcout,"$(P)$(R)$(CHAN)AmpInc")
+{
+    field(DESC, "Output Amplitude Inc")
+    field(INPA, "$(P)$(R)$(CHAN)AmpSet NPP NMS")
+    field(INPB, "$(P)$(R)$(CHAN)AmpStep NPP NMS")
+    field(CALC, "(A+B)<=5.00?(A+B):0")
+    field(OUT,  "$(P)$(R)$(CHAN)AmpSet PP NMS")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+}
+record(calcout,"$(P)$(R)$(CHAN)AmpDec")
+{
+    field(DESC, "Output Amplitude Dec")
+    field(INPA, "$(P)$(R)$(CHAN)AmpSet NPP NMS")
+    field(INPB, "$(P)$(R)$(CHAN)AmpStep NPP NMS")
+    field(CALC, "(A-B)>=0.50?(A-B):0")
+    field(OUT,  "$(P)$(R)$(CHAN)AmpSet PP NMS")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+}
+record(ao,"$(P)$(R)$(CHAN)AmpStep")
+{
+    field(DESC, "Output Amplitude Tweak")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+}
+record(ai,"$(P)$(R)$(CHAN)Offset")
+{
+    field(PINI, "YES")
+    field(DESC, "Output Offset")
+    field(SCAN, "Passive")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) $(CHAN)_OFFSET")
+}
+record(ao,"$(P)$(R)$(CHAN)OffsetSet")
+{
+    field(DESC, "Output Offset")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) $(CHAN)_OFFSET")
+    field(FLNK, "$(P)$(R)$(CHAN)Offset")
+}
+record(calcout,"$(P)$(R)$(CHAN)OffsetInc")
+{
+    field(DESC, "Output Offset Inc")
+    field(INPA, "$(P)$(R)$(CHAN)OffsetSet NPP NMS")
+    field(INPB, "$(P)$(R)$(CHAN)OffsetStep NPP NMS")
+    field(CALC, "(A+B)<=2.00?(A+B):0")
+    field(OUT,  "$(P)$(R)$(CHAN)OffsetSet PP NMS")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+}
+record(calcout,"$(P)$(R)$(CHAN)OffsetDec")
+{
+    field(DESC, "Output Offset Dec")
+    field(INPA, "$(P)$(R)$(CHAN)OffsetSet NPP NMS")
+    field(INPB, "$(P)$(R)$(CHAN)OffsetStep NPP NMS")
+    field(CALC, "(A-B)>=-2.00?(A-B):0")
+    field(OUT,  "$(P)$(R)$(CHAN)OffsetSet PP NMS")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+}
+record(ao,"$(P)$(R)$(CHAN)OffsetStep")
+{
+    field(DESC, "Output Offset Tweak")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+}
+record(bi,"$(P)$(R)$(CHAN)Polarity")
+{
+    field(PINI, "YES")
+    field(DESC, "Output Polarity")
+    field(SCAN, "Passive")
+    field(ZNAM, "NEG")
+    field(ONAM, "POS")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) $(CHAN)_POLARITY")
+}
+record(bo,"$(P)$(R)$(CHAN)PolaritySet")
+{
+    field(DESC, "Status Clear")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "NEG")
+    field(ONAM, "POS")
+    field(OUT,  "@asyn($(PORT)) $(CHAN)_POLARITY")
+    field(FLNK, "$(P)$(R)$(CHAN)Polarity")
+}
+record(seq,"$(P)$(R)$(CHAN)ModeTtlSeq")
+{
+    field(DESC, "Output Mode")
+    field(SCAN, "Passive")
+    field(LNK1, "$(P)$(R)$(CHAN)AmpSet PP NMS")
+    field(LNK2, "$(P)$(R)$(CHAN)OffsetSet PP NMS")
+    field(DO1,  "4.00")
+    field(DO2,  "0.00")
+    field(DLY1, "0")
+    field(DLY2, "0")
+}
+record(seq,"$(P)$(R)$(CHAN)ModeNimSeq")
+{
+    field(DESC, "Output Mode")
+    field(SCAN, "Passive")
+    field(LNK1, "$(P)$(R)$(CHAN)AmpSet PP NMS")
+    field(LNK2, "$(P)$(R)$(CHAN)OffsetSet PP NMS")
+    field(DO1,  "0.80")
+    field(DO2,  "-0.80")
+    field(DLY1, "0")
+    field(DLY2, "0")
+}

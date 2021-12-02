@@ -1,0 +1,33 @@
+## Trigger channel $(CHAN)related PVs
+
+record(longin,"$(P)$(R)$(CHAN)TrigPrescale")
+{
+    field(PINI, "YES")
+    field(DESC, "$(CHAN) Trigger Prescale")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TRIG_$(CHAN)_PRESCALE")
+}
+record(longout,"$(P)$(R)$(CHAN)TrigPrescaleSet")
+{
+   field(DESC, "$(CHAN) Trigger Prescale")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT)) TRIG_$(CHAN)_PRESCALE")
+   field(FLNK, "$(P)$(R)$(CHAN)TrigPrescale")
+}
+record(longin,"$(P)$(R)$(CHAN)TrigPhase")
+{
+    field(PINI, "YES")
+    field(DESC, "$(CHAN) Trigger Phase")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TRIG_$(CHAN)_PHASE")
+}
+record(longout,"$(P)$(R)$(CHAN)TrigPhaseSet")
+{
+   field(DESC, "$(CHAN) Trigger Phase")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT)) TRIG_$(CHAN)_PHASE")
+   field(FLNK, "$(P)$(R)$(CHAN)TriggerPhase")
+}
+
+
+

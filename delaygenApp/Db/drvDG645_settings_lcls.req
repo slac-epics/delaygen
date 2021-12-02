@@ -1,0 +1,14 @@
+$(P)$(R)Label
+
+$(P)$(R)T0AmpStep
+$(P)$(R)ABAmpStep
+$(P)$(R)CDAmpStep
+$(P)$(R)EFAmpStep
+$(P)$(R)GHAmpStep
+
+$(P)$(R)T0OffsetStep
+$(P)$(R)ABOffsetStep
+$(P)$(R)CDOffsetStep
+$(P)$(R)EFOffsetStep
+$(P)$(R)GHOffsetStep
+

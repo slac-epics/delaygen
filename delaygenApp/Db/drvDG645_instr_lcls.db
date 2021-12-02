@@ -1,0 +1,649 @@
+## Instrument management related PVs
+record(stringout,"$(P)$(R)Label")
+{
+    field(DESC, "Unit Label")
+}
+record(stringin,"$(P)$(R)Id")
+{
+    field(PINI, "YES")
+    field(DESC, "Ident")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT)) IDENT")
+}
+
+record(longin,"$(P)$(R)Status")
+{
+    field(PINI, "YES")
+    field(DESC, "Status value")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) STATUS_CODE")
+    field(SCAN, "I/O Intr")
+    field(FLNK, "$(P)$(R)StatusMsg")
+}
+record(stringin,"$(P)$(R)StatusMsg")
+{
+    field(PINI, "YES")
+    field(DESC, "Status text")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT)) STATUS")
+}
+record(bo,"$(P)$(R)StatusClear")
+{
+    field(DESC, "Status Clear")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) STATUS_CLEAR")
+}
+record(bo,"$(P)$(R)StatusUpdate")
+{
+    field(DESC, "Status Checking")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(DOL,  "1")
+    field(OUT,  "@asyn($(PORT)) STATUS_CHECKING")
+}
+
+record(bo,"$(P)$(R)Reset")
+{
+    field(DESC, "Reset")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) RESET")
+}
+record(bo,"$(P)$(R)LocalSet")
+{
+    field(DESC, "Goto Local")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) SetCAL")
+}
+record(bo,"$(P)$(R)RemoteSet")
+{
+    field(DESC, "Goto Remote")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) RESetTE")
+}
+
+## Instrument event status related PVs
+record(longin,"$(P)$(R)EventStatus")
+{
+    field(DESC, "Event Status")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) EVENT_STATUS")
+    field(SCAN, "Passive")
+    field(FLNK, "$(P)$(R)EventStatusMsg")
+}
+record(mbbiDirect,"$(P)$(R)EventStatusMsg")
+{
+    field(DESC, "Event Status Bits")
+    field(DTYP, "Soft Channel")
+    field(INP,  "$(P)$(R)EventStatus")
+}
+
+## Input trigger related PVs
+record(ai,"$(P)$(R)TrigRate")
+{
+    field(PINI, "YES")
+    field(DESC, "Trigger Rate")
+    field(SCAN, "Passive")
+    field(PREC, "6")
+    field(EGU,  "Hz")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) TRIG_RATE")
+}
+record(ao,"$(P)$(R)TrigRateSet")
+{
+    field(DESC, "Trigger Rate")
+    field(PREC, "6")
+    field(EGU,  "Hz")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) TRIG_RATE")
+    field(FLNK, "$(P)$(R)TrigRate")
+}
+record(ai,"$(P)$(R)TrigLevel")
+{
+    field(PINI, "YES")
+    field(DESC, "Trigger Level")
+    field(SCAN, "Passive")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) TRIG_LEVEL")
+}
+record(ao,"$(P)$(R)TrigLevelSet")
+{
+    field(DESC, "Trigger Level")
+    field(PREC, "2")
+    field(EGU,  "Volt")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) TRIG_LEVEL")
+    field(FLNK, "$(P)$(R)TrigLevel")
+}
+record(mbbi,"$(P)$(R)TrigSource")
+{
+    field(PINI, "YES")
+    field(DESC, "Trigger Source")
+    field(SCAN, "Passive")
+    field(ZRST, "Internal")
+    field(ONST, "Ext rising edge")
+    field(TWST, "Ext falling edge")
+    field(THST, "SS ext rise edge")
+    field(FRST, "SS ext fall edge")
+    field(FVST, "Single shot")
+    field(SXST, "Line")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "4")
+    field(FVVL, "5")
+    field(SXVL, "6")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TRIG_SOURCE")
+}
+record(mbbo,"$(P)$(R)TrigSourceSet")
+{
+    field(DESC, "Trigger Source")
+    field(SCAN, "Passive")
+    field(ZRST, "Internal")
+    field(ONST, "Ext rising edge")
+    field(TWST, "Ext falling edge")
+    field(THST, "SS ext rise edge")
+    field(FRST, "SS ext fall edge")
+    field(FVST, "Single shot")
+    field(SXST, "Line")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "4")
+    field(FVVL, "5")
+    field(SXVL, "6")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) TRIG_SOURCE")
+    field(FLNK, "$(P)$(R)TrigSource")
+}
+record(mbbi,"$(P)$(R)TrigInhibit")
+{
+    field(PINI, "YES")
+    field(DESC, "Trigger Inhibit")
+    field(SCAN, "Passive")
+    field(ZRST, "Off")
+    field(ONST, "Triggers")
+    field(TWST, "AB")
+    field(THST, "AB,CD")
+    field(FRST, "AB,CD,EF")
+    field(FVST, "AB,CD,EF,GH")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "4")
+    field(FVVL, "5")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TRIG_INHIT")
+}
+record(mbbo,"$(P)$(R)TrigInhibitSet")
+{
+    field(DESC, "Trigger Inhibit")
+    field(SCAN, "Passive")
+    field(ZRST, "Off")
+    field(ONST, "Triggers")
+    field(TWST, "AB")
+    field(THST, "AB,CD")
+    field(FRST, "AB,CD,EF")
+    field(FVST, "AB,CD,EF,GH")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "4")
+    field(FVVL, "5")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) TRIG_INHIT")
+    field(FLNK, "$(P)$(R)TrigInhibit")
+}
+record(bo,"$(P)$(R)TrigDelaySet")
+{
+    field(DESC, "Trigger Delay")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) TRIG_DELAY")
+}
+
+record(bi,"$(P)$(R)TrigAdvancedMode")
+{
+    field(PINI, "YES")
+    field(DESC, "Trigger Advanced Mode")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TRIG_ADV_SetDE")
+}
+record(bo,"$(P)$(R)TrigAdvancedModeSet")
+{
+    field(DESC, "Trigger Advanced Mode")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) TRIG_ADV_SetDE")
+    field(FLNK, "$(P)$(R)TrigAdvancedMode")
+}
+record(ai,"$(P)$(R)TrigHoldoff")
+{
+    field(PINI, "YES")
+    field(DESC, "Burst Delay")
+    field(PREC, "12")
+    field(EGU,  "Sec")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) TRIG_HOLDOFF")
+}
+record(ao,"$(P)$(R)TrigHoldoffSet")
+{
+    field(DESC, "Trigger Holdoff")
+    field(PREC, "12")
+    field(EGU,  "Sec")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) TRIG_HOLDOFF")
+    field(FLNK, "$(P)$(R)TrigHoldoff")
+}
+record(longin,"$(P)$(R)TrigPrescale")
+{
+    field(PINI, "YES")
+    field(DESC, "Trigger Prescale")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TRIG_PRESCALE")
+}
+record(longout,"$(P)$(R)TrigPrescaleSet")
+{
+    field(DESC, "Trigger Prescale")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) TRIG_PRESCALE")
+    field(FLNK, "$(P)$(R)TrigPrescale")
+}
+
+
+## Burst mode related PVs
+record(bi,"$(P)$(R)BurstMode")
+{
+    field(PINI, "YES")
+    field(DESC, "Burst Mode")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) BURST_SetDE")
+}
+record(bo,"$(P)$(R)BurstModeSet")
+{
+    field(DESC, "Burst Mode")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) BURST_SetDE")
+    field(FLNK, "$(P)$(R)BurstMode")
+}
+record(longin,"$(P)$(R)BurstCount")
+{
+    field(PINI, "YES")
+    field(DESC, "Burst Count")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) BURST_COUNT")
+}
+record(longout,"$(P)$(R)BurstCountSet")
+{
+    field(DESC, "Burst Count")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) BURST_COUNT")
+    field(FLNK, "$(P)$(R)BurstCount")
+}
+record(bi,"$(P)$(R)BurstConfig")
+{
+    field(PINI, "YES")
+    field(DESC, "Burst T0 Config")
+    field(SCAN, "Passive")
+    field(ZNAM, "All Cycles")
+    field(ONAM, "1st Cycle")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) BURST_T0")
+}
+record(bo,"$(P)$(R)BurstConfigSet")
+{
+    field(DESC, "Burst T0 Config")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "All Cycles")
+    field(ONAM, "1st Cycle")
+    field(OUT,  "@asyn($(PORT)) BURST_T0")
+    field(FLNK, "$(P)$(R)BurstConfig")
+}
+record(ai,"$(P)$(R)BurstDelay")
+{
+    field(PINI, "YES")
+    field(DESC, "Burst Delay")
+    field(PREC, "12")
+    field(EGU,  "Sec")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) BURST_DELAY")
+}
+record(ao,"$(P)$(R)BurstDelaySet")
+{
+    field(DESC, "Burst Delay")
+    field(PREC, "12")
+    field(EGU,  "Sec")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) BURST_DELAY")
+    field(FLNK, "$(P)$(R)BurstDelay")
+}
+record(ai,"$(P)$(R)BurstPeriod")
+{
+    field(PINI, "YES")
+    field(DESC, "Burst Period")
+    field(PREC, "8")
+    field(EGU,  "Sec")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT)) BURST_PERIOD")
+}
+record(ao,"$(P)$(R)BurstPeriodSet")
+{
+    field(DESC, "Burst Period")
+    field(PREC, "8")
+    field(EGU,  "Sec")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT)) BURST_PERIOD")
+    field(FLNK, "$(P)$(R)BurstPeriod")
+}
+
+
+## Interface configuration related PVs
+record(bi,"$(P)$(R)CommSerialState")
+{
+    field(PINI, "YES")
+    field(DESC, "Serial State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) RS232")
+}
+record(bo,"$(P)$(R)CommSerialStateSet")
+{
+    field(DESC, "Serial State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) RS232")
+    field(FLNK, "$(P)$(R)CommSerialState")
+}
+record(mbbi,"$(P)$(R)CommSerialBaud")
+{
+    field(PINI, "YES")
+    field(DESC, "Serial Baud")
+    field(SCAN, "Passive")
+    field(ZRST, "4800")
+    field(ONST, "9600")
+    field(TWST, "19200")
+    field(THST, "38400")
+    field(FRST, "57600")
+    field(FVST, "115200")
+    field(ZRVL, "4800")
+    field(ONVL, "9600")
+    field(TWVL, "19200")
+    field(THVL, "38400")
+    field(FRVL, "57600")
+    field(FVVL, "115200")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) RS232_BAUD")
+}
+record(mbbo,"$(P)$(R)CommSerialBaudSet")
+{
+    field(DESC, "Serial Baud")
+    field(SCAN, "Passive")
+    field(ZRST, "4800")
+    field(ONST, "9600")
+    field(TWST, "19200")
+    field(THST, "38400")
+    field(FRST, "57600")
+    field(FVST, "115200")
+    field(ZRVL, "4800")
+    field(ONVL, "9600")
+    field(TWVL, "19200")
+    field(THVL, "38400")
+    field(FRVL, "57600")
+    field(FVVL, "115200")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) RS232_BAUD")
+    field(FLNK, "$(P)$(R)CommSerialBaud")
+}
+
+record(bi,"$(P)$(R)CommGpibState")
+{
+    field(PINI, "YES")
+    field(DESC, "GPIB State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) GPIB")
+}
+record(bo,"$(P)$(R)CommGpibStateSet")
+{
+    field(DESC, "GPIB State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) GPIB")
+    field(FLNK, "$(P)$(R)CommGpibState")
+}
+record(longin,"$(P)$(R)CommGpibAddr")
+{
+    field(PINI, "YES")
+    field(DESC, "GPIB Address")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) GPIB_ADDRESS")
+}
+
+record(longout,"$(P)$(R)CommGpibAddrSet")
+{
+    field(DESC, "GPIB Address")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) GPIB_ADDRESS")
+    field(FLNK, "$(P)$(R)CommGpibAddr")
+}
+record(bi,"$(P)$(R)CommLanState")
+{
+    field(PINI, "YES")
+    field(DESC, "LAN State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TCPIP")
+}
+record(bo,"$(P)$(R)CommLanStateSet")
+{
+    field(DESC, "LAN State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) TCPIP")
+    field(FLNK, "$(P)$(R)CommLanState")
+}
+record(bi,"$(P)$(R)CommDhcpState")
+{
+    field(PINI, "YES")
+    field(DESC, "DHCP State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) DHCP")
+}
+record(bo,"$(P)$(R)CommDhcpStateSet")
+{
+    field(DESC, "DHCP State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) DHCP")
+    field(FLNK, "$(P)$(R)CommDhcpState")
+}
+record(bi,"$(P)$(R)CommAutoIpState")
+{
+    field(PINI, "YES")
+    field(DESC, "Auto-IP State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) AUTO_IP")
+}
+record(bo,"$(P)$(R)CommAutoIpStateSet")
+{
+    field(DESC, "Auto-IP State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) AUTO_IP")
+    field(FLNK, "$(P)$(R)CommAutoIpState")
+}
+record(bi,"$(P)$(R)CommStaticIpState")
+{
+    field(PINI, "YES")
+    field(DESC, "Static IP State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) STATIC_IP")
+}
+record(bo,"$(P)$(R)CommStaticIpStateSet")
+{
+    field(DESC, "Static IP State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) STATIC_IP")
+    field(FLNK, "$(P)$(R)CommStaticIpState")
+}
+record(bi,"$(P)$(R)CommBareSocketState")
+{
+    field(PINI, "YES")
+    field(DESC, "Bare Socket State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) BARE_SOCKET")
+}
+record(bo,"$(P)$(R)CommBareSocketStateSet")
+{
+    field(DESC, "Bare Socket State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) BARE_SOCKET")
+    field(FLNK, "$(P)$(R)CommBareSocketState")
+}
+record(bi,"$(P)$(R)CommTelnetState")
+{
+    field(PINI, "YES")
+    field(DESC, "Telnet State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) TELNET")
+}
+record(bo,"$(P)$(R)CommTelnetStateSet")
+{
+    field(DESC, "Telnet State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) TELNET")
+    field(FLNK, "$(P)$(R)CommTelnetState")
+}
+record(bi,"$(P)$(R)CommVxiState")
+{
+    field(PINI, "YES")
+    field(DESC, "VXI-11 State")
+    field(SCAN, "Passive")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT)) VXI11")
+}
+record(bo,"$(P)$(R)CommVxiStateSet")
+{
+    field(DESC, "VXI-11 State")
+    field(DTYP, "asynInt32")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OUT,  "@asyn($(PORT)) VXI11")
+    field(FLNK, "$(P)$(R)CommVxiState")
+}
+record(stringin,"$(P)$(R)CommIpAddrSI")
+{
+    field(PINI, "YES")
+    field(DESC, "IP Address")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT)) IP_ADDRESS")
+}
+record(stringout,"$(P)$(R)CommIpAddrSO")
+{
+    field(DESC, "IP Address")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(PORT)) IP_ADDRESS")
+    field(FLNK, "$(P)$(R)CommIpAddrSI")
+}
+record(stringin,"$(P)$(R)CommNetMaskSI")
+{
+    field(PINI, "YES")
+    field(DESC, "Network Mask")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT)) NET_MASK")
+}
+record(stringout,"$(P)$(R)CommNetMaskSO")
+{
+    field(DESC, "Network Mask")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(PORT)) NET_MASK")
+    field(FLNK, "$(P)$(R)CommNetMaskSI")
+}
+record(stringin,"$(P)$(R)CommGatewaySI")
+{
+    field(PINI, "YES")
+    field(DESC, "Gateway Address")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT)) GATEWAY")
+}
+record(stringout,"$(P)$(R)CommGatewaySO")
+{
+    field(DESC, "Gateway Address")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(PORT)) GATEWAY")
+    field(FLNK, "$(P)$(R)CommGatewaySI")
+}
+record(bo,"$(P)$(R)CommSerialResetSet")
+{
+    field(DESC, "Serial Reset")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) RS232_RESET")
+}
+record(bo,"$(P)$(R)CommGpibResetSet")
+{
+    field(DESC, "GPIB Reset")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) GPIB_RESET")
+}
+record(bo,"$(P)$(R)CommLanResetSet")
+{
+    field(DESC, "LAN Reset")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT)) TCPIP_RESET")
+}
+record(stringin,"$(P)$(R)CommMacAddrSI")
+{
+    field(PINI, "YES")
+    field(DESC, "MAC Address")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT)) MAC_ADDRESS")
+}
