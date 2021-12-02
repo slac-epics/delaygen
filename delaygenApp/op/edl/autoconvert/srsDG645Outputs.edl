@@ -1,8 +1,8 @@
-4 0 0
+4 0 1
 beginScreenProperties
 major 4
 minor 0
-release 0
+release 1
 x 804
 y 477
 w 650
@@ -22,7 +22,6 @@ botShadowColor index 44
 snapToGrid
 gridSize 5
 endScreenProperties
-
 
 # (Rectangle)
 object activeRectangleClass
@@ -44,8 +43,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 180
 w 90
@@ -53,9 +52,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Amplitude"
+  "Amplitude"
 }
 endObjectProperties
 
@@ -63,8 +63,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 260
 w 90
@@ -72,9 +72,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Offset"
+  "Offset"
 }
 endObjectProperties
 
@@ -82,8 +83,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 120
 w 90
@@ -91,9 +92,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Polarity"
+  "Polarity"
 }
 endObjectProperties
 
@@ -101,135 +103,140 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 105
 y 110
 w 60
 h 16
 controlPv "$(P)$(R)T0OutputPolarityBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 160
 w 50
 h 16
 controlPv "$(P)$(R)T0OutputAmpAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 180
 w 50
 h 22
 controlPv "$(P)$(R)T0OutputAmpAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 240
 w 50
 h 16
 controlPv "$(P)$(R)T0OutputOffsetAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 260
 w 50
 h 22
 controlPv "$(P)$(R)T0OutputOffsetAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 105
 y 35
 w 60
@@ -237,9 +244,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "T0"
+  "T0"
 }
 endObjectProperties
 
@@ -247,135 +255,140 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 220
 y 110
 w 60
 h 16
 controlPv "$(P)$(R)ABOutputPolarityBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 160
 w 50
 h 16
 controlPv "$(P)$(R)ABOutputAmpAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 180
 w 50
 h 22
 controlPv "$(P)$(R)ABOutputAmpAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 240
 w 50
 h 16
 controlPv "$(P)$(R)ABOutputOffsetAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 260
 w 50
 h 22
 controlPv "$(P)$(R)ABOutputOffsetAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 220
 y 35
 w 60
@@ -383,9 +396,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "AB"
+  "AB"
 }
 endObjectProperties
 
@@ -393,135 +407,140 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 335
 y 110
 w 60
 h 16
 controlPv "$(P)$(R)CDOutputPolarityBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 340
 y 160
 w 50
 h 16
 controlPv "$(P)$(R)CDOutputAmpAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 340
 y 180
 w 50
 h 22
 controlPv "$(P)$(R)CDOutputAmpAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 340
 y 240
 w 50
 h 16
 controlPv "$(P)$(R)CDOutputOffsetAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 340
 y 260
 w 50
 h 22
 controlPv "$(P)$(R)CDOutputOffsetAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 335
 y 35
 w 60
@@ -529,9 +548,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "CD"
+  "CD"
 }
 endObjectProperties
 
@@ -539,110 +559,114 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 455
 y 160
 w 50
 h 16
 controlPv "$(P)$(R)EFOutputAmpAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 455
 y 180
 w 50
 h 22
 controlPv "$(P)$(R)EFOutputAmpAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 455
 y 240
 w 50
 h 16
 controlPv "$(P)$(R)EFOutputOffsetAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 455
 y 260
 w 50
 h 22
 controlPv "$(P)$(R)EFOutputOffsetAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 455
 y 35
 w 60
@@ -650,9 +674,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "EF"
+  "EF"
 }
 endObjectProperties
 
@@ -660,135 +685,140 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 565
 y 110
 w 60
 h 16
 controlPv "$(P)$(R)GHOutputPolarityBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 570
 y 160
 w 50
 h 16
 controlPv "$(P)$(R)GHOutputAmpAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 570
 y 180
 w 50
 h 22
 controlPv "$(P)$(R)GHOutputAmpAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 570
 y 240
 w 50
 h 16
 controlPv "$(P)$(R)GHOutputOffsetAI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 570
 y 260
 w 50
 h 22
 controlPv "$(P)$(R)GHOutputOffsetAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 565
 y 35
 w 60
@@ -796,9 +826,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "GH"
+  "GH"
 }
 endObjectProperties
 
@@ -806,85 +837,88 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 450
 y 110
 w 60
 h 16
 controlPv "$(P)$(R)EFOutputPolarityBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 205
 w 50
 h 22
 controlPv "$(P)$(R)T0OutputAmpTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 285
 w 50
 h 22
 controlPv "$(P)$(R)T0OutputOffsetTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 70
 w 90
@@ -892,9 +926,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Mode"
+  "Mode"
 }
 endObjectProperties
 
@@ -902,216 +937,224 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 205
 w 50
 h 22
 controlPv "$(P)$(R)ABOutputAmpTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 285
 w 50
 h 22
 controlPv "$(P)$(R)ABOutputOffsetTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 340
 y 205
 w 50
 h 22
 controlPv "$(P)$(R)CDOutputAmpTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 455
 y 205
 w 50
 h 22
 controlPv "$(P)$(R)EFOutputAmpTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 570
 y 205
 w 50
 h 22
 controlPv "$(P)$(R)GHOutputAmpTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 340
 y 285
 w 50
 h 22
 controlPv "$(P)$(R)CDOutputOffsetTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 455
 y 285
 w 50
 h 22
 controlPv "$(P)$(R)EFOutputOffsetTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 570
 y 285
 w 50
 h 22
 controlPv "$(P)$(R)GHOutputOffsetTweakAO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 5
 w 150
@@ -1119,9 +1162,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 54
+bgColor index 0
 useDisplayBg
 value {
- "$(P)$(R)"
+  "$(P)$(R)"
 }
 endObjectProperties
 
@@ -1129,8 +1173,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 35
 w 100
@@ -1138,9 +1182,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "OUTPUTS"
+  "OUTPUTS"
 }
 endObjectProperties
 
@@ -1148,25 +1193,26 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 225
 y 5
 w 220
 h 20
 controlPv "$(P)$(R)Label"
+format "default"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 2
 autoHeight
-format "engr.
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Group)
@@ -1182,13 +1228,12 @@ h 20
 
 beginGroup
 
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 525
 y 5
 w 50
@@ -1196,22 +1241,23 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 20
+bgColor index 0
 useDisplayBg
-value {
- "ERROR"
-}
 visPv "CALC\\\{(A)\}($(P)$(R)StatusLI)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
+value {
+  "ERROR"
+}
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 500
 y 5
 w 100
@@ -1219,20 +1265,20 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 30
+bgColor index 0
 useDisplayBg
-value {
- "STATUS OFF"
-}
 visPv "CALC\\\{(A)\}($(P)$(R)StatusLI)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
+value {
+  "STATUS OFF"
+}
 endObjectProperties
 
 endGroup
 
 endObjectProperties
-
 
 # (Menu Button)
 object activeMenuButtonClass
@@ -1338,7 +1384,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 85
 y 205
@@ -1351,7 +1397,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)T0OutputAmpTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1363,7 +1408,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 160
 y 205
@@ -1376,7 +1421,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)T0OutputAmpTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1388,7 +1432,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 85
 y 285
@@ -1401,7 +1445,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)T0OutputOffsetTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1413,7 +1456,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 160
 y 285
@@ -1426,7 +1469,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)T0OutputOffsetTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1438,7 +1480,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 200
 y 205
@@ -1451,7 +1493,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ABOutputAmpTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1463,7 +1504,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 275
 y 205
@@ -1476,7 +1517,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ABOutputAmpTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1488,7 +1528,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 200
 y 285
@@ -1501,7 +1541,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ABOutputOffsetTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1513,7 +1552,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 275
 y 285
@@ -1526,7 +1565,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ABOutputOffsetTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1538,7 +1576,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 315
 y 205
@@ -1551,7 +1589,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)CDOutputAmpTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1563,7 +1600,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 390
 y 205
@@ -1576,7 +1613,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)CDOutputAmpTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1588,7 +1624,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 430
 y 205
@@ -1601,7 +1637,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EFOutputAmpTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1613,7 +1648,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 505
 y 205
@@ -1626,7 +1661,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EFOutputAmpTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1638,7 +1672,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 545
 y 205
@@ -1651,7 +1685,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GHOutputAmpTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1663,7 +1696,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 620
 y 205
@@ -1676,7 +1709,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GHOutputAmpTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1688,7 +1720,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 315
 y 285
@@ -1701,7 +1733,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)CDOutputOffsetTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1713,7 +1744,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 390
 y 285
@@ -1726,7 +1757,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)CDOutputOffsetTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1738,7 +1768,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 430
 y 285
@@ -1751,7 +1781,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EFOutputOffsetTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1763,7 +1792,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 505
 y 285
@@ -1776,7 +1805,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EFOutputOffsetTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1788,7 +1816,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 545
 y 285
@@ -1801,7 +1829,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GHOutputOffsetTweakDecCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel "<"
 offLabel "<"
 3d
@@ -1813,7 +1840,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 620
 y 285
@@ -1826,7 +1853,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GHOutputOffsetTweakIncCO.PROC"
 pressValue "1"
-releaseValue 
 onLabel ">"
 offLabel ">"
 3d
@@ -1838,7 +1864,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 105
 y 60
@@ -1851,7 +1877,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)T0OutputModeTtlSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "TTL"
 offLabel "TTL"
 3d
@@ -1863,7 +1888,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 105
 y 80
@@ -1876,7 +1901,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)T0OutputModeNimSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "NIM"
 offLabel "NIM"
 3d
@@ -1888,7 +1912,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 220
 y 60
@@ -1901,7 +1925,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ABOutputModeTtlSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "TTL"
 offLabel "TTL"
 3d
@@ -1913,7 +1936,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 220
 y 80
@@ -1926,7 +1949,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ABOutputModeNimSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "NIM"
 offLabel "NIM"
 3d
@@ -1938,7 +1960,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 335
 y 60
@@ -1951,7 +1973,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)CDOutputModeTtlSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "TTL"
 offLabel "TTL"
 3d
@@ -1963,7 +1984,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 335
 y 80
@@ -1976,7 +1997,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)CDOutputModeNimSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "NIM"
 offLabel "NIM"
 3d
@@ -1988,7 +2008,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 450
 y 60
@@ -2001,7 +2021,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EFOutputModeTtlSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "TTL"
 offLabel "TTL"
 3d
@@ -2013,7 +2032,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 450
 y 80
@@ -2026,7 +2045,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EFOutputModeNimSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "NIM"
 offLabel "NIM"
 3d
@@ -2038,7 +2056,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 565
 y 60
@@ -2051,7 +2069,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GHOutputModeTtlSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "TTL"
 offLabel "TTL"
 3d
@@ -2063,7 +2080,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 565
 y 80
@@ -2076,7 +2093,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GHOutputModeNimSS.PROC"
 pressValue "1"
-releaseValue 
 onLabel "NIM"
 offLabel "NIM"
 3d
@@ -2088,7 +2104,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 0
+minor 4
 release 0
 x 605
 y 5
@@ -2100,34 +2116,16 @@ topShadowColor index 2
 botShadowColor index 12
 font "helvetica-medium-r-10.0"
 buttonLabel "Main"
-numPvs 2
+numPvs 4
 numDsps 1
 displayFileName {
-  0 ../adl/srsDG645.edl
+  0 "srsDG645.edl"
 }
 menuLabel {
-  0 Main Screen
+  0 "Main Screen"
 }
 symbols {
   0 "P=$(P),R=$(R)"
 }
 endObjectProperties
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 500
-y 5
-w 100
-h 20
-
-beginGroup
-
-
-endGroup
-
-endObjectProperties
-
 

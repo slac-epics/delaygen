@@ -1,8 +1,8 @@
-4 0 0
+4 0 1
 beginScreenProperties
 major 4
 minor 0
-release 0
+release 1
 x 729
 y 369
 w 510
@@ -23,38 +23,38 @@ snapToGrid
 gridSize 5
 endScreenProperties
 
-
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 110
 y 35
 w 350
 h 16
 controlPv "$(P)$(R)IdentSI"
+format "string"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format "string"
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 5
 w 150
@@ -62,9 +62,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 54
+bgColor index 0
 useDisplayBg
 value {
- "$(P)$(R)"
+  "$(P)$(R)"
 }
 endObjectProperties
 
@@ -72,59 +73,61 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 635
 w 150
 h 16
 controlPv "$(P)$(R)IfaceGatewaySI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 355
 y 630
 w 150
 h 22
 controlPv "$(P)$(R)IfaceGatewaySO"
+format "string"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format "string"
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 635
 w 180
@@ -132,9 +135,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Gateway Address"
+  "Gateway Address"
 }
 endObjectProperties
 
@@ -142,34 +146,35 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 170
 y 5
 w 200
 h 22
 controlPv "$(P)$(R)Label"
+format "default"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 50
 editable
 autoHeight
-format "engr.
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 0
 y 35
 w 100
@@ -177,9 +182,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Device ID"
+  "Device ID"
 }
 endObjectProperties
 
@@ -187,8 +193,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 155
 w 200
@@ -196,9 +202,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "RS-232 INTERFACE"
+  "RS-232 INTERFACE"
 }
 endObjectProperties
 
@@ -206,360 +213,374 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 195
 w 150
 h 16
 controlPv "$(P)$(R)IfaceSerialStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 220
 w 150
 h 16
 controlPv "$(P)$(R)IfaceSerialBaudMI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 410
 w 150
 h 16
 controlPv "$(P)$(R)IfaceLanStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 435
 w 150
 h 16
 controlPv "$(P)$(R)IfaceDhcpStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 460
 w 150
 h 16
 controlPv "$(P)$(R)IfaceAutoIpStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 485
 w 150
 h 16
 controlPv "$(P)$(R)IfaceStaticIpStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 510
 w 150
 h 16
 controlPv "$(P)$(R)IfaceBareSocketStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 535
 w 150
 h 16
 controlPv "$(P)$(R)IfaceTelnetStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 560
 w 150
 h 16
 controlPv "$(P)$(R)IfaceVxiStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 585
 w 150
 h 16
 controlPv "$(P)$(R)IfaceIpAddrSI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 610
 w 150
 h 16
 controlPv "$(P)$(R)IfaceNetMaskSI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 385
 w 200
 h 16
 controlPv "$(P)$(R)IfaceMacAddrSI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 355
 y 580
 w 150
 h 22
 controlPv "$(P)$(R)IfaceIpAddrSO"
+format "string"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format "string"
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 355
 y 605
 w 150
 h 22
 controlPv "$(P)$(R)IfaceNetMaskSO"
+format "string"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format "string"
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 510
 w 180
@@ -567,9 +588,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Bare Socket State"
+  "Bare Socket State"
 }
 endObjectProperties
 
@@ -577,8 +599,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 385
 w 180
@@ -586,9 +608,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "MAC Address"
+  "MAC Address"
 }
 endObjectProperties
 
@@ -596,8 +619,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 410
 w 180
@@ -605,9 +628,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "LAN State"
+  "LAN State"
 }
 endObjectProperties
 
@@ -615,8 +639,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 435
 w 180
@@ -624,9 +648,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "DHCP State"
+  "DHCP State"
 }
 endObjectProperties
 
@@ -634,8 +659,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 460
 w 180
@@ -643,9 +668,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Auto-IP State"
+  "Auto-IP State"
 }
 endObjectProperties
 
@@ -653,8 +679,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 485
 w 180
@@ -662,9 +688,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Static IP State"
+  "Static IP State"
 }
 endObjectProperties
 
@@ -672,8 +699,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 535
 w 180
@@ -681,9 +708,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Telnet State"
+  "Telnet State"
 }
 endObjectProperties
 
@@ -691,8 +719,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 560
 w 180
@@ -700,9 +728,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "VXI-11 State"
+  "VXI-11 State"
 }
 endObjectProperties
 
@@ -710,8 +739,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 585
 w 180
@@ -719,9 +748,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "IP Address"
+  "IP Address"
 }
 endObjectProperties
 
@@ -729,8 +759,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 610
 w 180
@@ -738,9 +768,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Network Mask"
+  "Network Mask"
 }
 endObjectProperties
 
@@ -748,8 +779,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 195
 w 180
@@ -757,9 +788,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Serial state"
+  "Serial state"
 }
 endObjectProperties
 
@@ -767,8 +799,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 220
 w 180
@@ -776,9 +808,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Serial Baud"
+  "Serial Baud"
 }
 endObjectProperties
 
@@ -786,8 +819,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 250
 w 200
@@ -795,9 +828,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "GPIB INTERFACE"
+  "GPIB INTERFACE"
 }
 endObjectProperties
 
@@ -805,8 +839,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 350
 w 200
@@ -814,9 +848,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "LAN INTERFACE"
+  "LAN INTERFACE"
 }
 endObjectProperties
 
@@ -824,84 +859,87 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 290
 w 150
 h 16
 controlPv "$(P)$(R)IfaceGpibStateBI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 200
 y 315
 w 150
 h 16
 controlPv "$(P)$(R)IfaceGpibAddrLI"
+format "decimal"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format decimal
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 355
 y 310
 w 75
 h 22
 controlPv "$(P)$(R)IfaceGpibAddrLO"
+format "decimal"
 font "helvetica-medium-r-8.0"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 51
 editable
 autoHeight
-format decimal
 motifWidget
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 290
 w 180
@@ -909,9 +947,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "GPIB State"
+  "GPIB State"
 }
 endObjectProperties
 
@@ -919,8 +958,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 315
 w 180
@@ -928,9 +967,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "GPIB Address"
+  "GPIB Address"
 }
 endObjectProperties
 
@@ -938,8 +978,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 10
 y 65
 w 216
@@ -947,9 +987,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "MANAGEMENT FUNCTIONS"
+  "MANAGEMENT FUNCTIONS"
 }
 endObjectProperties
 
@@ -1085,8 +1126,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 15
 y 100
 w 160
@@ -1094,9 +1135,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "STATUS CHECKING"
+  "STATUS CHECKING"
 }
 endObjectProperties
 
@@ -1113,13 +1155,12 @@ h 20
 
 beginGroup
 
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 345
 y 95
 w 50
@@ -1127,22 +1168,23 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 20
+bgColor index 0
 useDisplayBg
-value {
- "ERROR"
-}
 visPv "CALC\\\{(A)\}($(P)$(R)StatusLI)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
+value {
+  "ERROR"
+}
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 320
 y 95
 w 100
@@ -1150,26 +1192,26 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 30
+bgColor index 0
 useDisplayBg
-value {
- "STATUS OFF"
-}
 visPv "CALC\\\{(A)\}($(P)$(R)StatusLI)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
+value {
+  "STATUS OFF"
+}
 endObjectProperties
 
 endGroup
 
 endObjectProperties
 
-
 # (Message Button)
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 290
 y 155
@@ -1182,7 +1224,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)IfaceSerialResetBO"
 pressValue "1"
-releaseValue 
 onLabel "RESET"
 offLabel "RESET"
 3d
@@ -1382,7 +1423,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 290
 y 250
@@ -1395,7 +1436,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)IfaceGpibResetBO"
 pressValue "1"
-releaseValue 
 onLabel "RESET"
 offLabel "RESET"
 3d
@@ -1407,7 +1447,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 290
 y 350
@@ -1420,7 +1460,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)IfaceLanResetBO"
 pressValue "1"
-releaseValue 
 onLabel "RESET"
 offLabel "RESET"
 3d
@@ -1453,7 +1492,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 320
 y 120
@@ -1466,7 +1505,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)StatusClearBO"
 pressValue "1"
-releaseValue 
 onLabel "CLEAR ERROR"
 offLabel "CLEAR ERROR"
 3d
@@ -1478,7 +1516,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 440
 y 65
@@ -1491,7 +1529,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)ResetBO"
 pressValue "1"
-releaseValue 
 onLabel "RESET"
 offLabel "RESET"
 3d
@@ -1503,7 +1540,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 230
 y 65
@@ -1516,7 +1553,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GotoRemoteBO"
 pressValue "1"
-releaseValue 
 onLabel "GOTO REMOTE"
 offLabel "GOTO REMOTE"
 3d
@@ -1528,7 +1564,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 330
 y 65
@@ -1541,7 +1577,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)GotoLocalBO"
 pressValue "1"
-releaseValue 
 onLabel "GOTO LOCAL"
 offLabel "GOTO LOCAL"
 3d
@@ -1553,7 +1588,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 0
+minor 4
 release 0
 x 465
 y 5
@@ -1565,13 +1600,13 @@ topShadowColor index 2
 botShadowColor index 12
 font "helvetica-medium-r-10.0"
 buttonLabel "Main"
-numPvs 2
+numPvs 4
 numDsps 1
 displayFileName {
-  0 ../adl/srsDG645.edl
+  0 "srsDG645.edl"
 }
 menuLabel {
-  0 Main Screen
+  0 "Main Screen"
 }
 symbols {
   0 "P=$(P),R=$(R)"
@@ -1597,22 +1632,4 @@ botShadowColor index 14
 controlPv "$(P)$(R)StatusCheckingBO"
 font "helvetica-medium-r-10.0"
 endObjectProperties
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 320
-y 95
-w 100
-h 20
-
-beginGroup
-
-
-endGroup
-
-endObjectProperties
-
 

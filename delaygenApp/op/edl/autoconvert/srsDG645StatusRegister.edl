@@ -1,8 +1,8 @@
-4 0 0
+4 0 1
 beginScreenProperties
 major 4
 minor 0
-release 0
+release 1
 x 881
 y 147
 w 500
@@ -23,7 +23,6 @@ snapToGrid
 gridSize 5
 endScreenProperties
 
-
 # (Circle)
 object activeCircleClass
 beginObjectProperties
@@ -39,8 +38,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B7)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -59,8 +58,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B7)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -78,8 +77,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B6)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -98,8 +97,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B6)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -117,8 +116,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B5)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -137,8 +136,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B5)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -156,8 +155,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B4)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -176,8 +175,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B4)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -195,8 +194,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B3)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -215,8 +214,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B3)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -234,8 +233,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B2)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -254,8 +253,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B2)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -273,8 +272,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B1)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -293,8 +292,8 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B1)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -312,8 +311,8 @@ fill
 fillColor index 11
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B0)"
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Circle)
@@ -332,16 +331,16 @@ fillColor index 20
 lineWidth 0
 visPv "CALC\\\{(A)\}($(P)$(R)EventStatusMBBID.B0)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 30
 y 35
 w 160
@@ -349,9 +348,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 19
+bgColor index 0
 useDisplayBg
 value {
- "STATUS REGISTER"
+  "STATUS REGISTER"
 }
 endObjectProperties
 
@@ -359,33 +359,34 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 385
 y 38
 w 60
 h 16
 controlPv "$(P)$(R)EventStatusLI"
+format "string"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 54
 bgColor index 1
 autoHeight
-format "string"
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 320
 y 35
 w 50
@@ -393,9 +394,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Value"
+  "Value"
 }
 endObjectProperties
 
@@ -403,8 +405,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 5
 w 150
@@ -412,9 +414,10 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 54
+bgColor index 0
 useDisplayBg
 value {
- "$(P)$(R)"
+  "$(P)$(R)"
 }
 endObjectProperties
 
@@ -454,25 +457,26 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 0
+minor 7
 release 0
 x 165
 y 5
 w 180
 h 20
 controlPv "$(P)$(R)Label"
+format "default"
 font "helvetica-medium-r-8.0"
 fontAlign "center"
-smartRefresh
-fastUpdate
 fgColor index 14
 bgColor index 2
 autoHeight
-format "engr.
 nullColor index 32
+smartRefresh
+fastUpdate
 useHexPrefix
-objType "controls"
 newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Group)
@@ -488,13 +492,12 @@ h 20
 
 beginGroup
 
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 375
 y 5
 w 50
@@ -502,22 +505,23 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 20
+bgColor index 0
 useDisplayBg
-value {
- "ERROR"
-}
 visPv "CALC\\\{(A)\}($(P)$(R)StatusLI)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
+value {
+  "ERROR"
+}
 endObjectProperties
 
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 350
 y 5
 w 100
@@ -525,36 +529,37 @@ h 20
 font "helvetica-medium-r-8.0"
 fontAlign "center"
 fgColor index 30
+bgColor index 0
 useDisplayBg
-value {
- "STATUS OFF"
-}
 visPv "CALC\\\{(A)\}($(P)$(R)StatusLI)"
 visInvert
-visMin 0
-visMax 1
+visMin "0"
+visMax "1"
+value {
+  "STATUS OFF"
+}
 endObjectProperties
 
 endGroup
 
 endObjectProperties
 
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 70
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "TRIG: Got a trigger."
+  "TRIG: Got a trigger."
 }
 endObjectProperties
 
@@ -562,17 +567,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 90
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "RATE: Got a trigger while a delay or burst was in progress."
+  "RATE: Got a trigger while a delay or burst was in progress."
 }
 endObjectProperties
 
@@ -580,17 +586,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 110
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "END_OF_DELAY: A delay cycle has completed."
+  "END_OF_DELAY: A delay cycle has completed."
 }
 endObjectProperties
 
@@ -598,17 +605,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 130
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "END_OF_BURST: A burst cycle has completed."
+  "END_OF_BURST: A burst cycle has completed."
 }
 endObjectProperties
 
@@ -616,17 +624,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 150
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "INHIBIT: A trigger or output delay cycle was inhibited."
+  "INHIBIT: A trigger or output delay cycle was inhibited."
 }
 endObjectProperties
 
@@ -634,17 +643,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 170
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "ABORT_DELAY: A delay cycle was aborted early."
+  "ABORT_DELAY: A delay cycle was aborted early."
 }
 endObjectProperties
 
@@ -652,17 +662,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 190
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "PLL_UNLOCK: The 100 MHz PLL came unlocked."
+  "PLL_UNLOCK: The 100 MHz PLL came unlocked."
 }
 endObjectProperties
 
@@ -670,17 +681,18 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 75
 y 210
 w 420
 h 14
 font "helvetica-medium-r-8.0"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "RB_UNLOCK: The installed Rb oscillator is unlocked."
+  "RB_UNLOCK: The installed Rb oscillator is unlocked."
 }
 endObjectProperties
 
@@ -688,8 +700,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 70
 w 40
@@ -697,9 +709,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "Bit 0"
+  "Bit 0"
 }
 endObjectProperties
 
@@ -707,8 +720,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 90
 w 40
@@ -716,9 +729,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "1"
+  "1"
 }
 endObjectProperties
 
@@ -726,8 +740,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 110
 w 40
@@ -735,9 +749,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "2"
+  "2"
 }
 endObjectProperties
 
@@ -745,8 +760,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 130
 w 40
@@ -754,9 +769,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "3"
+  "3"
 }
 endObjectProperties
 
@@ -764,8 +780,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 150
 w 40
@@ -773,9 +789,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "4"
+  "4"
 }
 endObjectProperties
 
@@ -783,8 +800,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 170
 w 40
@@ -792,9 +809,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "5"
+  "5"
 }
 endObjectProperties
 
@@ -802,8 +820,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 190
 w 40
@@ -811,9 +829,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "6"
+  "6"
 }
 endObjectProperties
 
@@ -821,8 +840,8 @@ endObjectProperties
 object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
+minor 1
+release 1
 x 5
 y 210
 w 40
@@ -830,9 +849,10 @@ h 14
 font "helvetica-medium-r-8.0"
 fontAlign "right"
 fgColor index 14
+bgColor index 0
 useDisplayBg
 value {
- "7"
+  "7"
 }
 endObjectProperties
 
@@ -840,7 +860,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 0
+minor 4
 release 0
 x 455
 y 5
@@ -852,42 +872,24 @@ topShadowColor index 2
 botShadowColor index 12
 font "helvetica-medium-r-10.0"
 buttonLabel "Main"
-numPvs 2
+numPvs 4
 numDsps 1
 displayFileName {
-  0 ../adl/srsDG645.edl
+  0 "srsDG645.edl"
 }
 menuLabel {
-  0 Main Screen
+  0 "Main Screen"
 }
 symbols {
   0 "P=$(P),R=$(R)"
 }
 endObjectProperties
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 350
-y 5
-w 100
-h 20
-
-beginGroup
-
-
-endGroup
-
-endObjectProperties
-
 
 # (Message Button)
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 230
 y 35
@@ -900,7 +902,6 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(P)$(R)EventStatusLI.PROC"
 pressValue "1"
-releaseValue 
 onLabel "Read"
 offLabel "Read"
 3d
