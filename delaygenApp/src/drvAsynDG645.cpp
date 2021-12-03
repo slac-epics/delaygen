@@ -86,11 +86,13 @@
 
 
 
-#define LT_EPICSBASE(v,r,l) (EPICS_VERSION<(v)||(EPICS_VERSION==(v)&&(EPICS_REVISION<(r)||(EPICS_REVISION==(r)&&EPICS_MODIFICATION<(l)))))
+#ifndef LT_EPICSBASE
+#define LT_EPICSBASE(V,R,M,P) (EPICS_VERSION_INT < VERSION_INT((V),(R),(M),(P)))
+#endif
 #define LT_ASYN(v,r,l) (ASYN_VERSION<(v)||(ASYN_VERSION==(v)&&(ASYN_REVISION<(r)||(ASYN_REVISION==(r)&&ASYN_MODIFICATION<(l)))))
 
 /* Evaluate EPICS base */
-#if LT_EPICSBASE(3,14,7)
+#if LT_EPICSBASE(3,14,7,0)
     #error "EPICS base must be 3.14.7 or greater"
 #endif
 /* Evaluate asyn */

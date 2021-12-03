@@ -52,11 +52,13 @@
 
 /* EPICS base version-specific definitions (must be performed first) */
 #include <epicsVersion.h>
-#define LT_EPICSBASE(v,r,l) (EPICS_VERSION<(v)||(EPICS_VERSION==(v)&&(EPICS_REVISION<(r)||(EPICS_REVISION==(r)&&EPICS_MODIFICATION<(l)))))
+#ifndef LT_EPICSBASE
+#define LT_EPICSBASE(V,R,M,P) (EPICS_VERSION_INT < VERSION_INT((V),(R),(M),(P)))
+#endif
 
 
 /* Evaluate EPICS base */
-#if LT_EPICSBASE(3,14,7)
+#if LT_EPICSBASE(3,14,7,0)
     #error "EPICS base must be 3.14.7 or greater"
 #endif
 
