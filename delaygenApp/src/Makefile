@@ -28,6 +28,7 @@ DBD += nigpibSupport.dbd
 DBD += drvAsynCoherentSDG.dbd 
 DBD += delaygenSupport.dbd
 
+ifeq ($(BUILD_IOC),YES)
 #=============================================================================
 # Build an IOC application
 ifeq ($(OS_CLASS),Linux)
@@ -53,6 +54,7 @@ delaygenApp_LIBS += asyn
 delaygenApp_LIBS += calc
 delaygenApp_LIBS += stream
 delaygenApp_LIBS += $(EPICS_BASE_IOC_LIBS)
+endif
 
 #
 #=============================================================================
