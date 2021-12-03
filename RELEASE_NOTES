@@ -1,0 +1,25 @@
+#==============================================================
+#
+#  Name: RELEASE_NOTES
+#
+#  Rem: This files describes release notes for
+#       the Trigger Delay module.
+#
+#  URL:  https://github.com/epics-modules/delaygen
+#
+#==============================================================
+#
+R1.2.3-1.0.0  02-Dec-2021,   K. Luchini      (luchini)
+        Downloaded from github.
+        update for epics base R7.0.3.1-1.0
+        add db files for drvDG645_lcls.substitutions
+        drvDG645_inst_lcls.db, drvDG645_delay_lcls.db, 
+        drvDG645_trig_lcls.db, drvDG645_out_lcls.db, 
+        drvDG645_settings_lcls.req
+        The new dbs are a copy of drvDG645.db with the
+        PV names changed to meet the LCLS Naming
+        Convention standards      
+
+# End of file
+
+
