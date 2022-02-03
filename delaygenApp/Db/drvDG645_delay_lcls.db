@@ -93,7 +93,7 @@ record(ao,"$(P)$(R)$(CHAN)DelayWriteSet")
     field(OUT,  "@asyn($(PORT)) $(CHAN)_DELAY")
     field(FLNK, "$(P)$(R)$(CHAN)Delay")
 }
-record(ai,"$(P)$(R)$(CHAN)Delay")
+record(ai,"$(P)$(R)$(CHAN)DelayStep")
 {
     field(PINI, "YES")
     field(DESC, "Chan $(CHAN) Delay Tweak")
@@ -102,7 +102,7 @@ record(ai,"$(P)$(R)$(CHAN)Delay")
     field(DTYP, "asynFloat64")
     field(INP,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP")
 }
-record(ao,"$(P)$(R)$(CHAN)DelayStep")
+record(ao,"$(P)$(R)$(CHAN)DelayStepSet")
 {
     field(DESC, "Chan $(CHAN) Delay Tweak")
     field(PREC, "12")
