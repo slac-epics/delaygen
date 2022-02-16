@@ -66,6 +66,7 @@ record(ai,"$(P)$(R)$(CHAN)Delay")
     field(DTYP, "asynFloat64")
     field(INP,  "@asyn($(PORT)) $(CHAN)_DELAY")
     field(FLNK, "$(P)$(R)$(CHAN)DelaySeq")
+    info(autosaveFields, "DESC")
 }
 record(seq,"$(P)$(R)$(CHAN)DelaySeq")
 {
@@ -82,6 +83,7 @@ record(ao,"$(P)$(R)$(CHAN)DelaySet")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)$(CHAN)DelayWriteSet PP")
+    info(autosaveFields, "VAL")
 }
 record(ao,"$(P)$(R)$(CHAN)DelayWriteSet")
 {
@@ -101,6 +103,7 @@ record(ai,"$(P)$(R)$(CHAN)DelayStep")
     field(EGU,  "Sec")
     field(DTYP, "asynFloat64")
     field(INP,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP")
+    info(autosaveFields, "VAL")
 }
 record(ao,"$(P)$(R)$(CHAN)DelayStepSet")
 {
