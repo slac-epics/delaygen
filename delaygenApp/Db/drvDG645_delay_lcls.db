@@ -125,9 +125,3 @@ record(bo,"$(P)$(R)$(CHAN)DelayDec")
     field(OUT,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)$(CHAN)Delay")
 }
-record(ao,"$(P)$(R)DiffExtT0")
-{
-    field(DESC, "Difference Between External Input and T0")
-    field(PREC, "2")
-    field(EGU,  "ns")
-}

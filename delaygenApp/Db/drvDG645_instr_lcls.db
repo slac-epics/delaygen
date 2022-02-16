@@ -647,3 +647,9 @@ record(stringin,"$(P)$(R)CommMacAddrSI")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn($(PORT)) MAC_ADDRESS")
 }
+record(ao,"$(P)$(R)DiffExtT0")
+{
+    field(DESC, "Difference Between External Input and T0")
+    field(PREC, "2")
+    field(EGU,  "ns")
+}
