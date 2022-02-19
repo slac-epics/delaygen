@@ -53,13 +53,13 @@ record(bo,"$(P)$(R)LocalSet")
 {
     field(DESC, "Goto Local")
     field(DTYP, "asynInt32")
-    field(OUT,  "@asyn($(PORT)) SetCAL")
+    field(OUT,  "@asyn($(PORT)) LOCAL")
 }
 record(bo,"$(P)$(R)RemoteSet")
 {
     field(DESC, "Goto Remote")
     field(DTYP, "asynInt32")
-    field(OUT,  "@asyn($(PORT)) RESetTE")
+    field(OUT,  "@asyn($(PORT)) REMOTE")
 }
 
 ## Instrument event status related PVs
@@ -179,7 +179,7 @@ record(mbbi,"$(P)$(R)TrigInhibit")
     field(FRVL, "4")
     field(FVVL, "5")
     field(DTYP, "asynInt32")
-    field(INP,  "@asyn($(PORT)) TRIG_INHIT")
+    field(INP,  "@asyn($(PORT)) TRIG_INHIBIT")
 }
 record(mbbo,"$(P)$(R)TrigInhibitSet")
 {
@@ -198,7 +198,7 @@ record(mbbo,"$(P)$(R)TrigInhibitSet")
     field(FRVL, "4")
     field(FVVL, "5")
     field(DTYP, "asynInt32")
-    field(OUT,  "@asyn($(PORT)) TRIG_INHIT")
+    field(OUT,  "@asyn($(PORT)) TRIG_INHIBIT")
     field(FLNK, "$(P)$(R)TrigInhibit")
 }
 record(bo,"$(P)$(R)TrigDelaySet")
@@ -216,7 +216,7 @@ record(bi,"$(P)$(R)TrigAdvancedMode")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
     field(DTYP, "asynInt32")
-    field(INP,  "@asyn($(PORT)) TRIG_ADV_SetDE")
+    field(INP,  "@asyn($(PORT)) TRIG_ADV_MODE")
 }
 record(bo,"$(P)$(R)TrigAdvancedModeSet")
 {
@@ -224,7 +224,7 @@ record(bo,"$(P)$(R)TrigAdvancedModeSet")
     field(DTYP, "asynInt32")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
-    field(OUT,  "@asyn($(PORT)) TRIG_ADV_SetDE")
+    field(OUT,  "@asyn($(PORT)) TRIG_ADV_MODE")
     field(FLNK, "$(P)$(R)TrigAdvancedMode")
 }
 record(ai,"$(P)$(R)TrigHoldoff")
@@ -270,7 +270,7 @@ record(bi,"$(P)$(R)BurstMode")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
     field(DTYP, "asynInt32")
-    field(INP,  "@asyn($(PORT)) BURST_SetDE")
+    field(INP,  "@asyn($(PORT)) BURST_MODE")
 }
 record(bo,"$(P)$(R)BurstModeSet")
 {
@@ -278,7 +278,7 @@ record(bo,"$(P)$(R)BurstModeSet")
     field(DTYP, "asynInt32")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
-    field(OUT,  "@asyn($(PORT)) BURST_SetDE")
+    field(OUT,  "@asyn($(PORT)) BURST_MODE")
     field(FLNK, "$(P)$(R)BurstMode")
 }
 record(longin,"$(P)$(R)BurstCount")
