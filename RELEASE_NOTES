@@ -9,6 +9,13 @@
 #
 #==============================================================
 #
+R1.2.3-1.1.0  22-Feb-2022,   A. Le           (anle)
+        Add record to store external input-T0 difference
+        Fix record name collision
+        Save/Restore delay set and step PVs
+        Enable building for RTEMS
+        Fix asyn command typos
+
 R1.2.3-1.0.0  02-Dec-2021,   K. Luchini      (luchini)
         Downloaded from github.
         update for epics base R7.0.3.1-1.0
