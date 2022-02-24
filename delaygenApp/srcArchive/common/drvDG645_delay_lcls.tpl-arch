@@ -1,0 +1,6 @@
+# Delay channel $(CHAN) archived PVs
+
+$(DEV):$(CHAN)Ref              1.0      monitor
+$(DEV):$(CHAN)Delay            1.0      monitor
+$(DEV):$(CHAN)DelaySet         1.0      monitor
+$(DEV):$(CHAN)DelayStepSet     1.0      monitor

@@ -1,0 +1,4 @@
+# Instrument management archived PVs
+
+$(DEV):DiffExtT0               1.0      monitor
+

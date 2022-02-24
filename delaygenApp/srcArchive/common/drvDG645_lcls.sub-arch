@@ -1,0 +1,21 @@
+# DG645 archived PVs
+
+file drvDG645_delay_lcls.tpl-arch
+{   
+   pattern { DEV    , CHAN }
+           { $(DEV) , A    }
+           { $(DEV) , B    }
+           { $(DEV) , C    }
+           { $(DEV) , D    }
+           { $(DEV) , E    }
+           { $(DEV) , F    }
+           { $(DEV) , G    }
+           { $(DEV) , H    }
+}
+
+file drvDG645_instr_lcls.tpl-arch
+{   
+   pattern { DEV    }
+           { $(DEV) }
+}
+
