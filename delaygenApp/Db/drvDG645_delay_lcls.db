@@ -103,7 +103,6 @@ record(ai,"$(P)$(R)$(CHAN)DelayStep")
     field(EGU,  "Sec")
     field(DTYP, "asynFloat64")
     field(INP,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP")
-    info(autosaveFields, "VAL")
 }
 record(ao,"$(P)$(R)$(CHAN)DelayStepSet")
 {
@@ -113,6 +112,7 @@ record(ao,"$(P)$(R)$(CHAN)DelayStepSet")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP")
     field(FLNK, "$(P)$(R)$(CHAN)DelayStep")
+    info(autosaveFields, "VAL")
 }
 record(bo,"$(P)$(R)$(CHAN)DelayInc")
 {
