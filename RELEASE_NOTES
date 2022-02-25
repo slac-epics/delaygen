@@ -9,6 +9,10 @@
 #
 #==============================================================
 #
+R1.2.3-1.2.0  24-Feb-2022,   A. Le           (anle)
+        Autosave DelayStepSet instead of DelayStep
+        Add archive files
+
 R1.2.3-1.1.0  22-Feb-2022,   A. Le           (anle)
         Add record to store external input-T0 difference
         Fix record name collision
