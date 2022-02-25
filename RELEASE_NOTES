@@ -9,6 +9,9 @@
 #
 #==============================================================
 #
+R1.2.3-1.2.1  24-Feb-2022,   A. Le           (anle)
+        Upgrade asyn to R4.39-1.0.1
+
 R1.2.3-1.2.0  24-Feb-2022,   A. Le           (anle)
         Autosave DelayStepSet instead of DelayStep
         Add archive files
