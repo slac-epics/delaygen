@@ -65,7 +65,6 @@ record(ai,"$(P)$(R)$(CHAN)Delay")
     field(EGU,  "Sec")
     field(DTYP, "asynFloat64")
     field(INP,  "@asyn($(PORT)) $(CHAN)_DELAY")
-    field(FLNK, "$(P)$(R)$(CHAN)DelaySeq")
     info(autosaveFields, "DESC")
 }
 record(seq,"$(P)$(R)$(CHAN)DelaySeq")
