@@ -61,6 +61,7 @@ record(ai,"$(P)$(R)$(CHAN)Delay")
 {
     field(PINI, "YES")
     field(DESC, "Chan $(CHAN) Delay")
+    field(SCAN, "1 second")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(DTYP, "asynFloat64")
@@ -118,12 +119,25 @@ record(bo,"$(P)$(R)$(CHAN)DelayInc")
     field(DESC, "Chan $%(CHAN) Delay Tweak Inc")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP_POS")
-    field(FLNK, "$(P)$(R)$(CHAN)Delay")
+    field(FLNK, "$(P)$(R)$(CHAN)DelayTweakSeq")
+}
+record(seq,"$(P)$(R)$(CHAN)DelayTweakSeq")
+{
+    field(DESC, "Chan $%(CHAN) Delay Tweak Seq")
+    field(DOL1, "0")    # Passive
+    field(LNK1, "$(P)$(R)$(CHAN)Delay.SCAN")
+    field(DOL2, "1")
+    field(LNK2, "$(P)$(R)$(CHAN)Delay.PROC")
+    field(DOL3, "6")    # 1 second
+    field(LNK3, "$(P)$(R)$(CHAN)Delay.SCAN")
+    field(DLY4, "0.1")
+    field(DOL4, "1")
+    field(LNK4, "$(P)$(R)$(CHAN)DelaySeq.PROC")
 }
 record(bo,"$(P)$(R)$(CHAN)DelayDec")
 {
     field(DESC, "Chan $(CHAN) Delay Tweak Dec")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) $(CHAN)_DELAY_STEP_NEG")
-    field(FLNK, "$(P)$(R)$(CHAN)Delay")
+    field(FLNK, "$(P)$(R)$(CHAN)DelayTweakSeq")
 }
