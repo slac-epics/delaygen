@@ -138,29 +138,23 @@ record(bo,"$(P)$(R)$(CHAN)DelayDec")
 record(seq,"$(P)$(R)$(CHAN)DelayTweakSeq")
 {
     field(DESC, "Chan $(CHAN) Delay Tweak Seq")
-    #field(DOL1, "1")
-    #field(LNK1, "$(P)$(R)$(CHAN)DelayHsv.PROC")
-    #field(DOL2, "1")
-    #field(LNK2, "$(P)$(R)$(CHAN)DelayLsv.PROC")
-    #field(DOL3, "1")
-    #field(LNK3, "$(P)$(R)$(CHAN)DelayScan.PROC")
-    field(DOL4, "0")    # NO_ALARM
-    field(LNK4, "$(P)$(R)$(CHAN)Delay.HSV")
-    field(DOL5, "0")    # NO_ALARM
-    field(LNK5, "$(P)$(R)$(CHAN)Delay.LSV")
-    field(DOL6, "0")    # Passive
-    field(LNK6, "$(P)$(R)$(CHAN)Delay.SCAN")
-    field(DOL7, "1")
-    field(LNK7, "$(P)$(R)$(CHAN)Delay.PROC")
-    field(DOL8, "$(P)$(R)$(CHAN)DelayScan")
-    field(LNK8, "$(P)$(R)$(CHAN)Delay.SCAN")
-    field(DLY9, "0.1")
-    field(DOL9, "1")
-    field(LNK9, "$(P)$(R)$(CHAN)DelaySeq.PROC")
-    field(DOLA, "$(P)$(R)$(CHAN)DelayHsv")
-    field(LNKA, "$(P)$(R)$(CHAN)Delay.HSV")
-    field(DOLB, "$(P)$(R)$(CHAN)DelayLsv")
-    field(LNKB, "$(P)$(R)$(CHAN)Delay.LSV")
+    field(DOL1, "0")    # NO_ALARM
+    field(LNK1, "$(P)$(R)$(CHAN)Delay.HSV")
+    field(DOL2, "0")    # NO_ALARM
+    field(LNK2, "$(P)$(R)$(CHAN)Delay.LSV")
+    field(DOL3, "0")    # Passive
+    field(LNK3, "$(P)$(R)$(CHAN)Delay.SCAN")
+    field(DOL4, "1")
+    field(LNK4, "$(P)$(R)$(CHAN)Delay.PROC")
+    field(DOL5, "$(P)$(R)$(CHAN)DelayScan")
+    field(LNK5, "$(P)$(R)$(CHAN)Delay.SCAN")
+    field(DLY6, "0.1")
+    field(DOL6, "1")
+    field(LNK6, "$(P)$(R)$(CHAN)DelaySeq.PROC")
+    field(DOL7, "$(P)$(R)$(CHAN)DelayHsv")
+    field(LNK7, "$(P)$(R)$(CHAN)Delay.HSV")
+    field(DOL8, "$(P)$(R)$(CHAN)DelayLsv")
+    field(LNK8, "$(P)$(R)$(CHAN)Delay.LSV")
 }
 record(ai,"$(P)$(R)$(CHAN)DelayHsv")
 {
