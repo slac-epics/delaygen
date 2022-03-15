@@ -81,6 +81,9 @@ record(seq,"$(P)$(R)$(CHAN)DelaySeq")
     field(DOL3, "0")
     field(LNK3, "$(P)$(R)$(CHAN)DelayWriteSet.DISA")
 }
+
+# The FLNK macro is for specifying a PV to calculate limits for Delay.
+# You may leave it blank and set hard limits (Delay.HIGH, Delay.LOW).
 record(ao,"$(P)$(R)$(CHAN)DelaySet")
 {
     field(DESC, "Chan $(CHAN) Delay")
