@@ -23,15 +23,15 @@ file drvDG645_trig_lcls.db
 }
 file drvDG645_delay_lcls.db
 {
-  pattern{ CHAN }
-         {  A   }
-         {  B   }
-         {  C   }
-         {  D   }
-         {  E   }
-         {  F   }
-         {  G   }
-         {  H   }
+  pattern{ CHAN , FLNK    }
+         {  A   , $(FLNK) }
+         {  B   , $(FLNK) }
+         {  C   , $(FLNK) }
+         {  D   , $(FLNK) }
+         {  E   , $(FLNK) }
+         {  F   , $(FLNK) }
+         {  G   , $(FLNK) }
+         {  H   , $(FLNK) }
 }
 
 # End of file
