@@ -33,5 +33,17 @@ file drvDG645_delay_lcls.db
          {  G   , $(FLNK) }
          {  H   , $(FLNK) }
 }
+file drvDG645_limits_lcls.db
+{
+  pattern{ CHAN , TOL    , EPS    }
+         {  A   , $(TOL) , $(EPS) }
+         {  B   , $(TOL) , $(EPS) }
+         {  C   , $(TOL) , $(EPS) }
+         {  D   , $(TOL) , $(EPS) }
+         {  E   , $(TOL) , $(EPS) }
+         {  F   , $(TOL) , $(EPS) }
+         {  G   , $(TOL) , $(EPS) }
+         {  H   , $(TOL) , $(EPS) }
+}
 
 # End of file

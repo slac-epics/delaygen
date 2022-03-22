@@ -1,0 +1,36 @@
+## Delay limit PVs for channel $(CHAN)
+
+# Set delta to DelaySet * TOL + EPS
+record(calc, "$(P)$(R)$(CHAN)DelaySetDelta") {
+  field(DESC, "Chan $(CHAN) Delay Set Delta")
+  field(PINI, "YES")
+  field(CALC, "A*B+C")
+  field(INPA, "$(P)$(R)$(CHAN)DelaySet")
+  field(INPB, "$(='$(TOL=1e-6))")
+  field(INPC, "$(='$(EPS=1e-12))")
+  field(FLNK, "$(P)$(R)$(CHAN)DelayLimits")
+}
+
+record(fanout, "$(P)$(R)$(CHAN)DelayLimits") {
+  field(DESC, "Chan $(CHAN) Delay Limits")
+  field(LNK1, "$(P)$(R)$(CHAN)DelayHigh")
+  field(LNK2, "$(P)$(R)$(CHAN)DelayLow")
+}
+
+# Set Delay.HIGH to DelaySet + Delta
+record(calcout, "$(P)$(R)$(CHAN)DelayHigh") {
+  field(DESC, "Chan $(CHAN) Delay High")
+  field(CALC, "A+B")
+  field(INPA, "$(P)$(R)$(CHAN)DelaySet")
+  field(INPB, "$(P)$(R)$(CHAN)DelaySetDelta")
+  field(OUT,  "$(P)$(R)$(CHAN)Delay.HIGH")
+}
+
+# Set Delay.LOW to DelaySet - Delta
+record(calcout, "$(P)$(R)$(CHAN)DelayLow") {
+  field(DESC, "Chan $(CHAN) Delay Low")
+  field(CALC, "A-B")
+  field(INPA, "$(P)$(R)$(CHAN)DelaySet")
+  field(INPB, "$(P)$(R)$(CHAN)DelaySetDelta")
+  field(OUT,  "$(P)$(R)$(CHAN)Delay.LOW")
+}
