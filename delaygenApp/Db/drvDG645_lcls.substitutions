@@ -33,6 +33,21 @@ file drvDG645_delay_lcls.db
          {  G   , $(FLNK) }
          {  H   , $(FLNK) }
 }
+
+# Epsilon (EPS) determines the smallest possible distance between
+# DelaySet and both Delay.HIGH and Delay.LOW. It should be as low as
+# possible, but floating-point precision loss may occur at high
+# setpoints. Therefore, we also introduce tolerance (TOL), which
+# ensures that the delta is a non-negligible fraction of the setpoint.
+#
+# DelaySetDelta = DelaySet * TOL + EPS
+# Delay.HIGH = DelaySet + DelaySetDelta
+# Delay.LOW = DelaySet - DelaySetDelta
+#
+# Suggested values:
+# TOL = 1e-6
+# EPS = 1e-12
+
 file drvDG645_limits_lcls.db
 {
   pattern{ CHAN , TOL    , EPS    }

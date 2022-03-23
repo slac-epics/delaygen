@@ -1,4 +1,22 @@
 ## Delay limit PVs for channel $(CHAN)
+# 
+# These PVs are for alarming delay readbacks when they differ from the
+# setpoints. We set the readback's HIGH and LOW almost equal to the
+# setpoint when the latter is processed. Since the readback alarms
+# even when it is equal to a limit, there must be separation between
+# the limits and the setpoint.
+#
+# DelaySetDelta is defined as the distance from DelaySet (setpoint)
+# to both Delay.HIGH (readback) and Delay.LOW. Epsilon (EPS) determines
+# the smallest possible gap. It should as low as possible, but
+# floating-point precision loss may occur at high setpoints. Therefore,
+# we also introduce tolerance (TOL), which ensures that the delta is a
+# non-negligible fraction of the setpoint.
+#
+# Putting it all together:
+# DelaySetDelta = DelaySet * TOL + EPS
+# Delay.HIGH = DelaySet + DelaySetDelta
+# Delay.LOW = DelaySet - DelaySetDelta
 
 # Set delta to DelaySet * TOL + EPS
 record(calc, "$(P)$(R)$(CHAN)DelaySetDelta") {
@@ -6,11 +24,14 @@ record(calc, "$(P)$(R)$(CHAN)DelaySetDelta") {
   field(PINI, "YES")
   field(CALC, "A*B+C")
   field(INPA, "$(P)$(R)$(CHAN)DelaySet")
-  field(INPB, "$(='$(TOL=1e-6))")
-  field(INPC, "$(='$(EPS=1e-12))")
+  field(INPB, "$(TOL=1e-6)")
+  field(INPC, "$(EPS=1e-12)")
+  field(EGU,  "Sec")
+  field(PREC, "12")
   field(FLNK, "$(P)$(R)$(CHAN)DelayLimits")
 }
 
+# Process DelayHigh and DelayLow
 record(fanout, "$(P)$(R)$(CHAN)DelayLimits") {
   field(DESC, "Chan $(CHAN) Delay Limits")
   field(LNK1, "$(P)$(R)$(CHAN)DelayHigh")
@@ -23,6 +44,8 @@ record(calcout, "$(P)$(R)$(CHAN)DelayHigh") {
   field(CALC, "A+B")
   field(INPA, "$(P)$(R)$(CHAN)DelaySet")
   field(INPB, "$(P)$(R)$(CHAN)DelaySetDelta")
+  field(EGU,  "Sec")
+  field(PREC, "12")
   field(OUT,  "$(P)$(R)$(CHAN)Delay.HIGH")
 }
 
@@ -32,5 +55,7 @@ record(calcout, "$(P)$(R)$(CHAN)DelayLow") {
   field(CALC, "A-B")
   field(INPA, "$(P)$(R)$(CHAN)DelaySet")
   field(INPB, "$(P)$(R)$(CHAN)DelaySetDelta")
+  field(EGU,  "Sec")
+  field(PREC, "12")
   field(OUT,  "$(P)$(R)$(CHAN)Delay.LOW")
 }
