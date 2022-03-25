@@ -9,6 +9,13 @@
 #
 #==============================================================
 #
+R1.2.3-1.6.0  25-Mar-2022,   A. Le           (anle)
+        Add delay limit PVs
+        Include notes about TOL and EPS macros
+        Add PV to tell whether DG645 is connected
+        Process delay setpoints when DG645 becomes connected
+        Remove SI and change SO to Set in DG645 PV names
+
 R1.2.3-1.5.0  15-Mar-2022,   A. Le           (anle)
         Allow delay HIGH and LOW to be specified by macro
         Autosave HIGH, LOW, HSV, and LSV fields of delay readbacks
