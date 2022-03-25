@@ -580,47 +580,47 @@ record(bo,"$(P)$(R)CommVxiStateSet")
     field(OUT,  "@asyn($(PORT)) VXI11")
     field(FLNK, "$(P)$(R)CommVxiState")
 }
-record(stringin,"$(P)$(R)CommIpAddrSI")
+record(stringin,"$(P)$(R)CommIpAddr")
 {
     field(PINI, "YES")
     field(DESC, "IP Address")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn($(PORT)) IP_ADDRESS")
 }
-record(stringout,"$(P)$(R)CommIpAddrSO")
+record(stringout,"$(P)$(R)CommIpAddrSet")
 {
     field(DESC, "IP Address")
     field(DTYP, "asynOctetWrite")
     field(OUT,  "@asyn($(PORT)) IP_ADDRESS")
-    field(FLNK, "$(P)$(R)CommIpAddrSI")
+    field(FLNK, "$(P)$(R)CommIpAddr")
 }
-record(stringin,"$(P)$(R)CommNetMaskSI")
+record(stringin,"$(P)$(R)CommNetMask")
 {
     field(PINI, "YES")
     field(DESC, "Network Mask")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn($(PORT)) NET_MASK")
 }
-record(stringout,"$(P)$(R)CommNetMaskSO")
+record(stringout,"$(P)$(R)CommNetMaskSet")
 {
     field(DESC, "Network Mask")
     field(DTYP, "asynOctetWrite")
     field(OUT,  "@asyn($(PORT)) NET_MASK")
-    field(FLNK, "$(P)$(R)CommNetMaskSI")
+    field(FLNK, "$(P)$(R)CommNetMask")
 }
-record(stringin,"$(P)$(R)CommGatewaySI")
+record(stringin,"$(P)$(R)CommGateway")
 {
     field(PINI, "YES")
     field(DESC, "Gateway Address")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn($(PORT)) GATEWAY")
 }
-record(stringout,"$(P)$(R)CommGatewaySO")
+record(stringout,"$(P)$(R)CommGatewaySet")
 {
     field(DESC, "Gateway Address")
     field(DTYP, "asynOctetWrite")
     field(OUT,  "@asyn($(PORT)) GATEWAY")
-    field(FLNK, "$(P)$(R)CommGatewaySI")
+    field(FLNK, "$(P)$(R)CommGateway")
 }
 record(bo,"$(P)$(R)CommSerialResetSet")
 {
@@ -640,7 +640,7 @@ record(bo,"$(P)$(R)CommLanResetSet")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TCPIP_RESET")
 }
-record(stringin,"$(P)$(R)CommMacAddrSI")
+record(stringin,"$(P)$(R)CommMacAddr")
 {
     field(DESC, "MAC Address")
     field(SCAN, "10 second")
@@ -661,7 +661,7 @@ record(calcout, "$(P)$(R)Connected")
 {
     field(DESC, "MAC Address SEVR field")
     field(CALC, "(A=0)?1:0")
-    field(INPA, "$(P)$(R)CommMacAddrSI.SEVR CPP")
+    field(INPA, "$(P)$(R)CommMacAddr.SEVR CPP")
     field(OUT,  "$(P)$(R)ProcDelaySets.PROC PP")
     field(OOPT, "Transition To Non-zero")
 }
