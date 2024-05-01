@@ -1,0 +1,7 @@
+# Instrument management archived PVs
+
+$(DEV):Label
+
+$(DEV):DiffExtT0               /NOLOG
+
+

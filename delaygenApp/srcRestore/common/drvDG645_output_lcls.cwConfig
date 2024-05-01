@@ -1,0 +1,6 @@
+# Output channel $(CHAN) restore PVs
+
+$(DEV):$(CHAN)AmpStep          /NOLOG
+$(DEV):$(CHAN)OffsetStep       /NOLOG
+
+

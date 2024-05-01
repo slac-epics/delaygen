@@ -11,6 +11,7 @@ dbd/
 html/
 include/
 lib/
+restore/
 templates/
 cdCommands
 envPaths

@@ -1,0 +1,31 @@
+# DG645 restore PVs
+
+file drvDG645_output_lcls.cwConfig
+{
+  pattern{ CHAN }
+         { T0   }
+         { AB   }
+         { CD   }
+         { EF   }
+         { GH   }
+}
+file drvDG645_delay_lcls.cwConfig
+{
+   pattern { DEV    , CHAN }
+           { $(DEV) , A    }
+           { $(DEV) , B    }
+           { $(DEV) , C    }
+           { $(DEV) , D    }
+           { $(DEV) , E    }
+           { $(DEV) , F    }
+           { $(DEV) , G    }
+           { $(DEV) , H    }
+}
+
+file drvDG645_instr_lcls.cwConfig
+{
+   pattern { DEV    }
+           { $(DEV) }
+}
+
+
