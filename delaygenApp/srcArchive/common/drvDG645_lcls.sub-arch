@@ -9,6 +9,7 @@ file drvDG645_output_lcls.tpl-arch
          { EF   }
          { GH   }
 }
+
 file drvDG645_delay_lcls.tpl-arch
 {
    pattern { DEV    , CHAN }
@@ -27,4 +28,5 @@ file drvDG645_instr_lcls.tpl-arch
    pattern { DEV    }
            { $(DEV) }
 }
+
 

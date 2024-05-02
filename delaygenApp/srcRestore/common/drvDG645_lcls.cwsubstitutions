@@ -9,6 +9,7 @@ file drvDG645_output_lcls.cwConfig
          { EF   }
          { GH   }
 }
+
 file drvDG645_delay_lcls.cwConfig
 {
    pattern { DEV    , CHAN }
