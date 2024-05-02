@@ -9,6 +9,11 @@
 #
 #==============================================================
 #
+R1.2.3-1.7.0  02-May-2024,   A. Le           (anle)
+        Add Channel Watcher config file
+        Archive and restore trigger level
+        Archive amplitude and offset steps
+
 R1.2.3-1.6.0  25-Mar-2022,   A. Le           (anle)
         Add delay limit PVs
         Include notes about TOL and EPS macros
@@ -48,12 +53,12 @@ R1.2.3-1.0.0  02-Dec-2021,   K. Luchini      (luchini)
         Downloaded from github.
         update for epics base R7.0.3.1-1.0
         add db files for drvDG645_lcls.substitutions
-        drvDG645_inst_lcls.db, drvDG645_delay_lcls.db, 
-        drvDG645_trig_lcls.db, drvDG645_out_lcls.db, 
+        drvDG645_inst_lcls.db, drvDG645_delay_lcls.db,
+        drvDG645_trig_lcls.db, drvDG645_out_lcls.db,
         drvDG645_settings_lcls.req
         The new dbs are a copy of drvDG645.db with the
         PV names changed to meet the LCLS Naming
-        Convention standards      
+        Convention standards
 
 # End of file
 
