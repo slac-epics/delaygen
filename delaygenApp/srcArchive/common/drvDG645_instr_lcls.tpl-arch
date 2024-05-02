@@ -1,4 +1,7 @@
 # Instrument management archived PVs
 
+$(DEV):TrigLevel               1.0      monitor
+$(DEV):TrigLevelSet            1.0      monitor
+
 $(DEV):DiffExtT0               1.0      monitor
 
