@@ -1,7 +1,16 @@
 # DG645 archived PVs
 
+file drvDG645_output_lcls.tpl-arch
+{
+  pattern{ CHAN }
+         { T0   }
+         { AB   }
+         { CD   }
+         { EF   }
+         { GH   }
+}
 file drvDG645_delay_lcls.tpl-arch
-{   
+{
    pattern { DEV    , CHAN }
            { $(DEV) , A    }
            { $(DEV) , B    }
@@ -14,7 +23,7 @@ file drvDG645_delay_lcls.tpl-arch
 }
 
 file drvDG645_instr_lcls.tpl-arch
-{   
+{
    pattern { DEV    }
            { $(DEV) }
 }
