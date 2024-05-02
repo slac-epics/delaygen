@@ -9,6 +9,9 @@
 #
 #==============================================================
 #
+R1.2.3-1.7.1  02-May-2024,   A. Le           (anle)
+        Upgrade asyn to R4.39-1.0.1
+
 R1.2.3-1.7.0  02-May-2024,   A. Le           (anle)
         Add Channel Watcher config file
         Archive and restore trigger level
