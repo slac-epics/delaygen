@@ -9,6 +9,10 @@
 #
 #==============================================================
 #
+R1.2.3-1.7.2  03-May-2024,   A. Le           (anle)
+        Explicitly cross-compile for linuxRT-i686,
+        linuxRT-x86_64, and RTEMS-beatnik
+
 R1.2.3-1.7.1  02-May-2024,   A. Le           (anle)
         Upgrade asyn to R4.39-1.0.1
 
