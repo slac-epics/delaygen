@@ -1,9 +1,9 @@
 # Instrument management archived PVs
 
-$(DEV):Label
-$(DEV):TrigLevel
-$(DEV):TrigLevelSet
+$(P)$(R)Label
+$(P)$(R)TrigLevel
+$(P)$(R)TrigLevelSet
 
-$(DEV):DiffExtT0               /NOLOG
+$(P)$(R)DiffExtT0               /NOLOG
 
 

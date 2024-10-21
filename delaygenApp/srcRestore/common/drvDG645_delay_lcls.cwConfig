@@ -1,13 +1,13 @@
 # Delay channel $(CHAN) restore PVs
 
-$(DEV):$(CHAN)Ref              /NOLOG
-$(DEV):$(CHAN)Delay            /NOLOG
-$(DEV):$(CHAN)Delay.DESC       /NOLOG
-$(DEV):$(CHAN)Delay.HIGH       /NOLOG
-$(DEV):$(CHAN)Delay.LOW        /NOLOG
-$(DEV):$(CHAN)Delay.HSV        /NOLOG
-$(DEV):$(CHAN)Delay.LSV        /NOLOG
-$(DEV):$(CHAN)DelaySet         /NOLOG
-$(DEV):$(CHAN)DelayStepSet     /NOLOG
+$(P)$(R)$(CHAN)Ref              /NOLOG
+$(P)$(R)$(CHAN)Delay            /NOLOG
+$(P)$(R)$(CHAN)Delay.DESC       /NOLOG
+$(P)$(R)$(CHAN)Delay.HIGH       /NOLOG
+$(P)$(R)$(CHAN)Delay.LOW        /NOLOG
+$(P)$(R)$(CHAN)Delay.HSV        /NOLOG
+$(P)$(R)$(CHAN)Delay.LSV        /NOLOG
+$(P)$(R)$(CHAN)DelaySet         /NOLOG
+$(P)$(R)$(CHAN)DelayStepSet     /NOLOG
 
 

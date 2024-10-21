@@ -11,6 +11,7 @@
 #
 R1.2.3-1.8.0  15-Oct-2024,   A. Le           (anle)
         Archive and restore amplitude and offset
+        Replace DEV macro with P and R
 
 R1.2.3-1.7.2  03-May-2024,   A. Le           (anle)
         Explicitly cross-compile for linuxRT-i686,
