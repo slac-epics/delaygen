@@ -1,6 +1,10 @@
 # Delay channel $(CHAN) archived PVs
 
+$(DEV):$(CHAN)Amp              1.0      monitor
+$(DEV):$(CHAN)AmpSet           1.0      monitor
 $(DEV):$(CHAN)AmpStep          1.0      monitor
+$(DEV):$(CHAN)Offset           1.0      monitor
+$(DEV):$(CHAN)OffsetSet        1.0      monitor
 $(DEV):$(CHAN)OffsetStep       1.0      monitor
 
 
