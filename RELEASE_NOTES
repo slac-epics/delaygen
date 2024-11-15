@@ -9,6 +9,9 @@
 #
 #==============================================================
 #
+R1.2.3-1.8.1  15-Nov-2024,   J. Lorelli      (lorelli)
+        Upgrade to asyn/R4.39-1.0.2
+
 R1.2.3-1.8.0  15-Oct-2024,   A. Le           (anle)
         Archive and restore amplitude and offset
         Replace DEV macro with P and R
